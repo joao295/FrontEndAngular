@@ -1,5 +1,6 @@
-import { Tema } from "./tema"
-import { User } from "./user"
+import { Tema } from "./Tema"
+import { User } from "./User"
+
 
 
 export class Postagem {
