@@ -4,12 +4,8 @@
       <div class="row d-flex justify-content-center">
         <div class="col-md-6 text-white">
           <h1 class="fs-54">Seja bem vindo !</h1>
-
           <h5 class="fs-18">Expresse suas opiniões e seus pensamentos</h5>
-
-
         </div>
-
       </div>
 
       <div class="row d-flex justify-content-center mt-3 mb-5">
@@ -99,6 +95,8 @@
                 {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}
               </small></p>
 
+              <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+              <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
 
           </div>
         </div>
@@ -162,7 +160,7 @@
                 <label for="texto">texto</label>
                 <textarea [(ngModel)]='postagem.texto' class="form-control" name="texto" id="texto" rows="3"
                   placeholder="Ditite o texto">
-  </textarea>
+                </textarea>
               </div>
 
               <div class="form-group">
